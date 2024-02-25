@@ -4,7 +4,7 @@
 ###  ROLL NO : 212221230035
 ###  DEPARTMENT: B.TECH AI&DS
 
-**AIM:** 
+## AIM
 To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
 
@@ -90,12 +90,9 @@ void loop()
  }
 }
 ```
+![image](https://github.com/HariniBaskar/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/93427253/dbd2d7b8-4e15-44fe-b693-3094ce3c1886)
 
-[My image](username.github.com/repository/img/image.jpg)
-
-**
-**Simulation output:** 
-**
+## SIMULATION OUTPUT:
 ## ON
 ![image](https://github.com/HariniBaskar/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/93427253/a8e60342-acee-4928-8fb0-cf7847dcc9f7)
 
