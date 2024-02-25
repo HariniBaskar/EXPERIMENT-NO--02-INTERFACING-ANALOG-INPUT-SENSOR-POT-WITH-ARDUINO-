@@ -1,10 +1,11 @@
- ###  DATE: 
+# INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO
+###  DATE: 23-2-2024
+###  NAME: Harini B.
+###  ROLL NO : 212221230035
+###  DEPARTMENT: B.TECH AI&DS
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
-
-**AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
+**AIM:** 
+To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
 
 **COMPONENTS REQUIRED:**
@@ -16,8 +17,7 @@
 6.	LED of choice 
 **
 
-
-**THEORY**: 
+**THEORY:** 
 
 **Analog signals:**
 
@@ -42,16 +42,12 @@ General specifications of analog sensor
 **Potentiometer**
 A potentiometer, informally a pot, is a three-terminal resistor with a sliding or rotating contact that forms an adjustable voltage divider. If only two terminals are used, one end and the wiper, it acts as a variable resistor or rheostat.
 Potentiometers are commonly used to control electrical devices such as volume controls on audio equipment. Potentiometers operated by a mechanism can be used as position transducers, for example, in a joystick. Potentiometers are rarely used to directly control significant power (more than a watt), since the power dissipated in the potentiometer would be comparable to the power in the controlled load
-CIRCUIT DIAGRAM
 
-
-
-
+### CIRCUIT DIAGRAM
 
 ![image](https://user-images.githubusercontent.com/36288975/163530788-eec3cdc3-95e8-4d2d-8349-6d0ea4c9439c.png)
 
-**FIGURE -01
-**
+FIGURE -01
 
 **PROCEDURE:**
 
@@ -65,30 +61,51 @@ CIRCUIT DIAGRAM
 8.	Upload the program and check for the physical working. 
 9.	Ensure safety before powering up the device 
 
-
-
 **PROGRAM** 
+```
+int pot;
+int led=7;
+void setup()
+{
+ pinMode(led,OUTPUT);
+ Serial.begin(9600);
+}
+void loop()
+{
+ pot=analogRead(A0);
+ //Serial.print("Value=");
+ Serial.println(pot);
  
+ if(pot>900)
+ {
+ digitalWrite(led, HIGH);
+ delay(500); 
+ digitalWrite(led, LOW);
+ delay(500); 
+ }
+ else
+ {
+   digitalWrite(led,LOW);
+   delay(500);
+ }
+}
+```
 
-
-
-
-
-
-
-
+[My image](username.github.com/repository/img/image.jpg)
 
 **
 **Simulation output:** 
 **
+## ON
+![image](https://github.com/HariniBaskar/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/93427253/a8e60342-acee-4928-8fb0-cf7847dcc9f7)
+
+## OFF
+![image](https://github.com/HariniBaskar/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/93427253/0546ceba-25ad-4761-83c9-c5bf5c9153da)
+
+## SCHEMATIC VIEW
+![out2](https://github.com/HariniBaskar/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/93427253/11ae8751-c8e3-4c40-869c-45c56454945c)
 
 
-[My image](username.github.com/repository/img/image.jpg)
 
-
-
-
-
-
-
-**RESULT: ** Arduino uno analog input functioning is learned and interfaced with digital input switch .
+**RESULT:** 
+Arduino uno analog input functioning is learned and interfaced with digital input switch .
